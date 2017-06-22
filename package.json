@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
+  "name": "Mail",
   "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "description": "mail prices",
   "engines": {
     "node": "6.10.2"
   },
@@ -10,17 +10,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "ejs": "2.5.6",
-    "express": "4.15.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT"
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
+  }
 }
