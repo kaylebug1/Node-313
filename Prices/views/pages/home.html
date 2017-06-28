@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mail Prices</title>
+</head>
+<body>
+	<h1>Find the Price</h1>
+	<form method="get" action="/price">
+		Enter weight: 
+		<input type="number" name="ounce" min="0" max="15"> Ounces
+		<br>
+		<p>Type of mail:</p>
+		<select>
+			<option value="stamped">Letters(Stamped)</option>
+			<option value="metered">Letters(Metered)</option>
+			<option value="large">Large Envelopes(Flats)</option>
+			<option value="parcels">Parcels</option>
+		</select>
+		<br>
+		<input type="submit" name="send" value="Submit">
+		<button>Submit</button>
+	</form>
+</body>
+</html>
