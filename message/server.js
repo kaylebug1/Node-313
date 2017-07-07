@@ -1,14 +1,29 @@
-var config = {
-	user: 'ta', //env var: PGUSER 
-	database: 'messages', //env var: PGDATABASE 
-	password: 'password', //env var: PGPASSWORD 
-	host: 'localhost', // Server hosting the postgres database 
-	port: 5432
-};
+let pg = require('pg');
+if (process.env.DATABASE_URL) {
+  pg.defaults.ssl = true;
+}
 
+let connString = process.env.DATABASE_URL || 'postgresql://ta:password@localhost:5432/messages';
 const { Pool } = require('pg');
 
-const pool = new Pool(config);
+// console.log(connString);
+const pool = new Pool({
+  connectionString : connString
+});
+
+
+
+// var config = {
+// 	user: 'ta', //env var: PGUSER 
+// 	database: 'messages', //env var: PGDATABASE 
+// 	password: 'password', //env var: PGPASSWORD 
+// 	host: 'localhost', // Server hosting the postgres database 
+// 	port: 5432
+// };
+
+// const { Pool } = require('pg');
+
+// const pool = new Pool(config);
 
 
 var express = require('express');
